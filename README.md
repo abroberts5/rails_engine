@@ -33,7 +33,7 @@ $ rails s
 localhost:3000
 ```
 
-## Running the RSpec Test Suite
+### Running the RSpec Test Suite
 
 RailsEngine has a full RSpec suite of feature and model tests for every piece of functionality in the app.
 
