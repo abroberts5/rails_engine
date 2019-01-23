@@ -4,7 +4,7 @@ These instructions will get you a copy of the project extensions up and running 
 
 ####Prerequisites:
 * Install Ruby (Version 2.4.5)
-* Install Rails (Version 5.1)
+* Install Rails (Version 5.2)
 
 ####Installing:
 To run this application locally, clone this repo and follow the steps below:
