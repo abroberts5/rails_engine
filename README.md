@@ -11,24 +11,18 @@ These instructions will get you a copy of the project extensions up and running 
 
 To run this application locally, clone this repo and follow the steps below:
 
-1) Install gems:
-```
-$ bundle
-```
-
-
-2) Create, migrate, & seed database:
+1) Install gems, Create, migrate, & seed database:
 ```
 $ bundle && bundle update && rake db:{drop,create,migrate,seed}
 ```
 
 
-3) Start your rails server:
+2) Start your rails server:
 ```
 $ rails s
 ```
 
-4) Open browser and navigate to:
+3) Open browser and navigate to:
 ```
 localhost:3000
 ```
