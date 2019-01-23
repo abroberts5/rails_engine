@@ -32,12 +32,15 @@ localhost:3000
 ```
 
 ##Running the RSpec Test Suite
+
 RailsEngine has a full RSpec suite of feature and model tests for every piece of functionality in the app.
 
 ####Running the Full Test Suite:
 From the root of directory, type the below command to run the full test suite:
 
-$ rspec Running only Feature Tests: Type this command from the root of this directory.
+$ rspec
+Running only Feature Tests:
+Type this command from the root of this directory.
 
 ```
 $ rspec ./spec/requests/api/v1
