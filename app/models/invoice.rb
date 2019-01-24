@@ -1,7 +1,8 @@
-class Item < ApplicationRecord
-  validates_presence_of :name, :description, :unit_price
+class Invoice < ApplicationRecord
+  validates_presence_of :status
 
   belongs_to :merchant
   has_many :invoice_items
   has_many :items, through: :invoice_items
+  has_many :transactions
 end
