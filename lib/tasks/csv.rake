@@ -1,6 +1,9 @@
 require 'csv'
 
 namespace :seed do
+  desc "all"
+  task all: [:customers, :merchants, :items, :invoices, :invoice_items, :transactions]
+
   task customers: :environment do
     customers = './lib/data/customers.csv'
     CSV.foreach(customers, headers: true, header_converters: :symbol) do |row|
