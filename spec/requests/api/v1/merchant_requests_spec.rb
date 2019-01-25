@@ -21,5 +21,4 @@ describe "Merchants API" do
     expect(response).to be_successful
     expect(merchant["id"]).to eq(id)
   end
-  
 end
