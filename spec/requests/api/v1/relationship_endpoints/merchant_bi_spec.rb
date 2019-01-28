@@ -43,4 +43,12 @@ describe 'merchant business intelligence' do
     expect(merchants.first["id"]).to eq(Merchant.first.id)
     expect(merchants.first["name"]).to eq(Merchant.first.name)
   end
+  it 'returns the total revenue for date x across all merchants' do
+
+    get "/api/v1/merchants/revenue?date=#{Transaction.last.updated_at}"
+
+    merchants = JSON.parse(response.body)
+
+    expect(merchants.first["id"]).to eq(Merchant.last.id)
+  end
 end
