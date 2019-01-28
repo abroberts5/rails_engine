@@ -19,4 +19,18 @@ class Merchant < ApplicationRecord
     .group("merchants.id")
     .limit(quantity)
   end
+
+  def self.total_revenue(date)
+    joins(invoices: [:invoice_items, :transactions])
+    .merge(Transaction.successful)
+    .where("transactions.updated_at=?", date)
+    .sum("invoice_items.quantity * invoice_items.unit_price")
+  end
+
+  def all_revenue
+    joins(invoices: [:invoice_items, :transactions])
+    .select("merchants.*")
+    .merge(Transaction.successful)
+    .sum("invoice_items.quantity * invoice_items.unit_price")
+  end
 end
